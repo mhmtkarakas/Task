@@ -32,4 +32,46 @@
   border-radius: 10px;
   color: white;
   font-size: 20px;
+  cursor: pointer;
+}
+.task-list{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+ 
+}
+.task-show{
+  border: 1px solid green;
+  border-radius: 30px;
+  width: 350px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+.task-show h3{
+  margin-bottom: 5px;
+}
+.task-show .b-delete{
+  padding: 10px;
+  width: 60px;
+  border: none;
+  background: red;
+  border-radius: 10px;
+  margin-right: 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+}
+.task-show .b-edit{
+  padding: 10px;
+  width: 100px;
+  border: none;
+  background:blue;
+  border-radius: 10px;
+  margin-right: 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
 }
