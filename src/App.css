@@ -1,0 +1,35 @@
+
+.App{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.task-create{
+  width: 450px;
+}
+.task-form{
+  display: flex;
+  flex-direction: column;
+}
+.task-form label{
+  margin: 10px 0;
+}
+.task-form input{
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+.task-form textarea{
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+.task-form button{
+  margin: 10px 0;
+  padding: 10px;
+  border: none;
+  background-color: green;
+  border-radius: 10px;
+  color: white;
+  font-size: 20px;
+}

@@ -1,0 +1,3 @@
+1-TaskCreate ve TaskList isimli iki komponent olustururuz.
+2-TaskCreate komponentini app.js import ederiz altina h1 ile Gorevler onun da altina TaskList import ederiz.
+3-TaskCreate komponentinde h3 ile Lutfen Task Giriniz yazariz. sonra form elementi altina label (baslik), sonra input daha sonra yine Label etiketi (task Giriniz) sonra textarea elementi ve Olustur isimli button olustururuz
