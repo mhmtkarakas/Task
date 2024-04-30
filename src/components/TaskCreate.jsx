@@ -1,12 +1,19 @@
 import React, { useState } from "react";
 
-const TaskCreate = ({ onCreate, task, taskformUpdate }) => {
+const TaskCreate = ({ onCreate, task, taskformUpdate, onUpdate }) => {
   const [title, setTitle] = useState(task ? task.title : "" );
   const [desc, setDesc] = useState(task ? task.desc : "");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onCreate(title, desc);
+    //Formumuzun guncel hali olup olmadigini anlamak icin bir if kondition yapacagiz. taskformUpdate true oldugunda guncel
+    // demek oluyor. 
+    if(taskformUpdate){
+      //taskformUpdate true ise yeni bir props olusturacagiz. Bu props ile guncelledigimiz datalari props ile gonderecegiz.
+      onUpdate(task.id,title,desc) // Guncellenen datalar
+    }else{//taskformUpdate true degil ise guncellenmemis sekilde devam ederiz.
+      onCreate(title, desc);
+    }
     setTitle("");
     setDesc("");
   };

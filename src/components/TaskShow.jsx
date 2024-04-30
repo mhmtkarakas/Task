@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import TaskCreate from './TaskCreate';
 
-const TaskShow = ({ task, onDelete }) => {
+const TaskShow = ({ task, onDelete,onUpdate }) => {
   const [showEdit, setShowEdit] = useState(false);
   const handleDelete = () => {
     onDelete(task.id);
@@ -9,10 +9,16 @@ const TaskShow = ({ task, onDelete }) => {
   const handleEdit = () => {
     setShowEdit(!showEdit);
   };
+  //onUpdate propsu ile gonderdigimiz parametreleri handleSubmit fonksiyonumuzda karsilariz ve bunlari da olusturacagimiz
+  // bir props ile bir ust komponentimize gondeririz.
+  const handleSubmit = (id,updatedTask,updatedTaskDesc) => {
+    setShowEdit(false); // Guncelleme gerceklesti setShowEdit false olur.
+    onUpdate(id,updatedTask,updatedTaskDesc);
+  }
   return (
     <div className="task-show">
       {showEdit ? (
-        <TaskCreate task={task} taskformUpdate={true} />
+        <TaskCreate task={task} taskformUpdate={true} onUpdate={handleSubmit}  />// Gucellemeyi bitirdigimizde showEdit i false yapmamiz gerekir ve propslarimizi bir ust komponentimize tasimaliyiz. Bunu handleSubmit fonksiyonu ile gerceklestirecegiz
       ) : (
         <div>
           <h3>Goreviniz</h3>
