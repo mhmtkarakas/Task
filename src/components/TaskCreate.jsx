@@ -1,6 +1,12 @@
 import React, { useState } from "react";
+import TasksContext from "../context/task";
+import { useContext } from 'react'; 
 
-const TaskCreate = ({ onCreate, task, taskformUpdate, onUpdate }) => {
+
+const TaskCreate = ({ task, taskformUpdate, onUpdate }) => {
+
+  const {createTask,editTaskById}=useContext(TasksContext);
+
   const [title, setTitle] = useState(task ? task.title : "" );
   const [desc, setDesc] = useState(task ? task.desc : "");
 
@@ -11,8 +17,10 @@ const TaskCreate = ({ onCreate, task, taskformUpdate, onUpdate }) => {
     if(taskformUpdate){
       //taskformUpdate true ise yeni bir props olusturacagiz. Bu props ile guncelledigimiz datalari props ile gonderecegiz.
       onUpdate(task.id,title,desc) // Guncellenen datalar
+     //editTaskById(task.id,title,desc);
     }else{//taskformUpdate true degil ise guncellenmemis sekilde devam ederiz.
-      onCreate(title, desc);
+      //onCreate(title, desc);
+      createTask(title, desc);
     }
     setTitle("");
     setDesc("");

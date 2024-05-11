@@ -1,10 +1,16 @@
 import React, { useState } from "react";
 import TaskCreate from './TaskCreate';
+import TasksContext from "../context/task";
+import { useContext } from 'react'; 
 
-const TaskShow = ({ task, onDelete,onUpdate }) => {
+const TaskShow = ({ task }) => {
+
+  const { onDeleteById,editTaskById}=useContext(TasksContext);
+
   const [showEdit, setShowEdit] = useState(false);
   const handleDelete = () => {
-    onDelete(task.id);
+    //onDelete(task.id);
+    onDeleteById(task.id);
   };
   const handleEdit = () => {
     setShowEdit(!showEdit);
@@ -13,7 +19,8 @@ const TaskShow = ({ task, onDelete,onUpdate }) => {
   // bir props ile bir ust komponentimize gondeririz.
   const handleSubmit = (id,updatedTask,updatedTaskDesc) => {
     setShowEdit(false); // Guncelleme gerceklesti setShowEdit false olur.
-    onUpdate(id,updatedTask,updatedTaskDesc);
+    //onUpdate(id,updatedTask,updatedTaskDesc);
+    editTaskById(id,updatedTask,updatedTaskDesc);
   }
   return (
     <div className="task-show">
