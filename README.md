@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Tasks
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+* ![](./src/assets/Tasks-ezgif.com-video-to-gif-converter.gif)
 
-## Available Scripts
+## Project Description: Task Management Application
 
-In the project directory, you can run:
+* This project is a Task Management Application built using React.js and Context API. The application allows users to perform CRUD (Create, Read, Update, Delete) operations on tasks.
 
-### `npm start`
+## Features:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* 1. Task Listing: Users can view a list of tasks with details such as title, description, deadline, and status.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* 2. Add Task: Users can add a new task by providing a title, description, and deadline. The task is then added to the list.
 
-### `npm test`
+* 3. Edit Task: Users can edit existing tasks by modifying the title, description, deadline, or status of the task.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* 4. Delete Task: Users can delete tasks from the list, removing them permanently.
 
-### `npm run build`
+## Implementation Details:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
++ React Components: The application is divided into reusable React components for better organization and maintainability.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
++ Context API: Context API is used to manage the global state of tasks, allowing components to access and modify task data without prop drilling.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
++ CRUD Operations: Each CRUD operation (Create, Read, Update, Delete) is implemented using appropriate functions and methods, ensuring data integrity and consistency.
 
-### `npm run eject`
+## Future Enhancements:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
++ User Authentication: Implement user authentication to allow multiple users to manage their own tasks securely.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
++ Task Categories: Add support for categorizing tasks into different categories or labels for better organization.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
++ Search and Filter: Implement search and filter functionality to allow users to easily find tasks based on specific criteria.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Conclusion:
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Overall, this Task Management Application provides a user-friendly interface for managing tasks efficiently. By leveraging React.js and Context API, it offers a scalable and maintainable solution for task management needs.
